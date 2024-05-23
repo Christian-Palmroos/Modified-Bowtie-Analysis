@@ -38,9 +38,9 @@ def save_bowtie_results(results:dict, particle:str=None):
     # If particle is not provided, try to infer it
     if particle is None:
         if "E1" in results:
-            particle = "electron"
+            particle = 'e'
         elif "P1" in results:
-            particle = "proton"
+            particle = 'p'
         else:
             raise NameError("Parameter 'particle' not provided, nor could it be inferred.")
 
